@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  def index
-  end
+  before_action :authenticate_user!, except: [:index, :show]
 
   def new
     @post = Post.new
@@ -15,13 +14,17 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    render :edit
+    if current_user.id == @post.user_id
+      render :edit
+    else
+      redirect_to posts_path
+    end
   end
 
   def update
     post = Post.find(params[:id])
     post.update(title: params[:title],
-                 link: params[:link])
+                link: params[:link])
     redirect_to posts_path
   end
 
