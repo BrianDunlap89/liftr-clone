@@ -2,6 +2,6 @@ language: ruby
 rvm:
   - 2.2.2
 env:
-  - DB=sqlite3
+  - DB=postgresql
 script:
   - RAILS_ENV=test bundle exec rake
