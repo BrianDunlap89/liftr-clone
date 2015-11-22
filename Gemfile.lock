@@ -43,6 +43,7 @@ GEM
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bson (3.2.6)
     builder (3.2.2)
     bullet (4.14.10)
       activesupport (>= 3.0.0)
@@ -98,6 +99,13 @@ GEM
     mime-types (2.6.2)
     mini_portile (0.6.2)
     minitest (5.8.2)
+    mongo (2.1.2)
+      bson (~> 3.0)
+    mongoid (5.0.1)
+      activemodel (~> 4.0)
+      mongo (~> 2.1)
+      origin (~> 2.1)
+      tzinfo (>= 0.3.37)
     multi_json (1.11.2)
     net-http-persistent (2.9.4)
     nokogiri (1.6.6.2)
@@ -106,6 +114,7 @@ GEM
       ast
       ruby-ll (~> 2.1)
     open_uri_redirections (0.2.1)
+    origin (2.1.1)
     pg (0.18.3)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -205,6 +214,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   link_thumbnailer
+  mongoid (~> 5.0.0)
   pg
   pry
   rails (= 4.2.4)

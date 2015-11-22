@@ -27,6 +27,9 @@ gem 'link_thumbnailer'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Mongoid required for Bullet
+gem 'mongoid', '~> 5.0.0'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
